@@ -1,0 +1,152 @@
+/* Reset default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000; /* Pitch black background */
+    color: #E0E0E0; /* Light gray text */
+    line-height: 1.8; /* Improved readability */
+    font-size: 18px; /* Larger base font size */
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px; /* Wider container for a bigger feel */
+    margin: 0 auto;
+    padding: 20px 15px;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Slight transparency */
+    backdrop-filter: blur(10px); /* Blurry effect */
+    /* padding: 5px 0; Significantly reduced padding for smaller height */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333; /* Subtle border */
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* More space between nav items */
+}
+
+nav ul li a {
+    color: #E0E0E0;
+    text-decoration: none;
+    padding: 5px 10px; /* Reduced padding for smaller clickable area */
+    transition: all 0.3s ease-in-out;
+    font-weight: 500; /* Medium weight for minimalism */
+}
+nav ul li a:hover {
+    color: #1E90FF; /* Dark blue accent on hover */
+}
+
+nav ul li a.active {
+    color: #1E90FF; /* Dark blue for active link */
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 150px 20px;
+    background-color: #000000; /* Pitch black background */
+}
+
+#hero h1 {
+    font-size: 3.5em; /* Larger heading */
+    margin-bottom: 20px;
+    color: #E0E0E0;
+}
+
+#hero p {
+    font-size: 1.2em; /* Larger text */
+    color: #B0B0B0; /* Lighter gray for contrast */
+}
+
+/* Content Sections */
+.content-section {
+    padding: 120px 20px;
+    background-color: #000000; /* Pitch black background */
+    opacity: 0; /* Start hidden for fade-in effect */
+    transform: translateY(30px); /* Start slightly lower for fade-in effect */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.content-section.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+.content-section h2 {
+    font-size: 2.5em; /* Larger heading */
+    margin-bottom: 20px;
+    /* color: #E0E0E0; */
+    color: #1E90FF; /* Dark blue accent on hover */
+}
+
+.content-section p {
+    font-size: 1.1em; /* Larger text */
+    color: #B0B0B0; /* Lighter gray for contrast */
+    line-height: 1.8; /* Improved readability */
+}
+
+/* Discord Button */
+.discord-button {
+    background-color: #1E90FF; /* Dark blue */
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 12px 20px; /* Larger button */
+    font-weight: 500; /* Medium weight */
+    font-size: 18px; /* Larger font size */
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.discord-button:hover {
+    background-color: #0077CC; /* Slightly darker blue */
+}
+
+/* Footer */
+footer {
+    background-color: #000000; /* Pitch black background */
+    text-align: center;
+    padding: 30px 0; /* Larger padding */
+    color: #B0B0B0; /* Lighter gray */
+    border-top: 1px solid #333; /* Subtle border */
+    font-size: 1em; /* Larger text */
+}
+
+.text-imp {
+    color: #1E90FF; /* Dark blue color */
+    position: relative; /* Establishes a positioning context */
+}
+
+.text-imp::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #1E90FF;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.text-imp:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
