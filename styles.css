@@ -106,6 +106,7 @@ nav ul li a.active {
 .discord-button {
     background-color: #1E90FF; /* Dark blue */
     color: #FFFFFF;
+    border: none; /* Remove the border */
     border-radius: 5px;
     padding: 12px 20px; /* Larger button */
     font-weight: 500; /* Medium weight */
